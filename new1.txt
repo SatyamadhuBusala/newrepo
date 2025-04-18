@@ -1,1 +1,87 @@
-this is technicalhub 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #0f2027;  /* fallback for old browsers */
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      height: 100vh;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: floatUp 10s infinite ease-in;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    /* Generate multiple circles with different sizes, colors, positions */
+    .circle:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      background: #ff6b6b;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      background: #feca57;
+      left: 25%;
+      animation-delay: 2s;
+    }
+
+    .circle:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      background: #1dd1a1;
+      left: 40%;
+      animation-delay: 4s;
+    }
+
+    .circle:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      background: #54a0ff;
+      left: 60%;
+      animation-delay: 1s;
+    }
+
+    .circle:nth-child(5) {
+      width: 70px;
+      height: 70px;
+      background: #5f27cd;
+      left: 80%;
+      animation-delay: 3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</body>
+</html>
